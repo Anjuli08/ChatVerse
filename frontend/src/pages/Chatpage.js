@@ -6,7 +6,7 @@ import SideDrawer from "../components/miscellaneous/SideDrawer";
 import { ChatState } from "../Context/chatProvider";
 
 const Chatpage = () => {
-  //   const [fetchAgain, setFetchAgain] = useState(false);
+  const [fetchAgain, setFetchAgain] = useState(false);
   const { user } = ChatState();
 
   return (
@@ -20,8 +20,10 @@ const Chatpage = () => {
         p="10px"
         // flexDirection="row"
       >
-        {user && <MyChats />}
-        {user && <Chatbox />}
+        {user && <MyChats fetchAgain={fetchAgain} />}
+        {user && (
+          <Chatbox fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
+        )}
       </Box>
     </div>
   );
