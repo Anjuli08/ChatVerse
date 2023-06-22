@@ -4,7 +4,12 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "start": "nodemon backend/server.js"
+        "start": "nodemon backend/server.js",
+        "start-server": "node backend/server.js",
+        "install-server": "cd backend && npm install",
+        "install-client": "cd frontend && npm install",
+        "build-client": "cd frontend && npm run build",
+        "start-client": "cd frontend && npm start"
     },
     "author": "Anjuli Aggarwal",
     "license": "ISC",
