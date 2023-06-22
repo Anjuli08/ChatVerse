@@ -1,4 +1,4 @@
-import React, { useState, useSyncExternalStore } from "react";
+import React, { useState } from "react";
 import { Button } from "@chakra-ui/button";
 import { VStack } from "@chakra-ui/layout";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
