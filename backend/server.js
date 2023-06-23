@@ -13,7 +13,13 @@ const app = express();
 dotenv.config();
 connectDB();
 
+const corsOptions = {
+  origin: "https://chatverse-2v4i.onrender.com", // frontend URI (ReactJS)
+};
+
 app.use(express.json()); //to accept JSON data
+
+app.use(cors(corsOptions));
 
 // app.get("/", (req, res) => {
 //   res.send("API is running successfully");
